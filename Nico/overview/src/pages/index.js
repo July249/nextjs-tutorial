@@ -1,3 +1,13 @@
+import { useState } from 'react';
+
 export default function Home() {
-  return <div>hi</div>;
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>Hello! {count}</h1>
+      <button type='button' onClick={() => setCount((prev) => prev + 1)}>
+        +
+      </button>
+    </div>
+  );
 }

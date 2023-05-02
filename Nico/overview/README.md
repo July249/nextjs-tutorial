@@ -1,38 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lecture Note
 
-## Getting Started
+## 1-0 Library vs. FrameWork
 
-First, run the development server:
+- Libraries and frameworks are both tools that developers use to make programming easier and more efficient, but they have different main features and purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- A library is a collection of pre-written code that can be used to perform specific tasks, such as accessing a database, generating a chart, or validating user input. Developers can import the library into their project and use its functions and methods to accomplish these tasks without having to write the code from scratch. Libraries typically have a narrow focus and are designed to be flexible so that developers can customize them to fit their specific needs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- A framework, on the other hand, is a larger and more comprehensive tool that provides a complete structure and set of rules for building an application or system. A framework includes not only pre-written code but also guidelines for how that code should be used and how different parts of the application should interact with each other. Developers use a framework as a foundation for their project and build on top of it, rather than importing individual pieces of code as they would with a library. Frameworks often have a broader focus and provide a more opinionated approach to development, with a specific architecture or design pattern in mind.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- In summary, the main features of a library are:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  - A collection of pre-written code for specific tasks
+  - Narrow focus
+  - Flexible and customizable
+  - Imported into a project as needed
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- The main features of a framework are:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  - A comprehensive tool for building an application or system
+  - Includes pre-written code, guidelines, and structure
+  - Broader focus
+  - Provides a foundation for the project, rather than individual pieces of code.
 
-## Learn More
+## 1-1 Pages
 
-To learn more about Next.js, take a look at the following resources:
+- In NextJS, the file name in the Pages folder is same as routing URL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- It doesn't matter what is the export component name.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Only depends on the file name.
 
-## Deploy on Vercel
+## 1-2 Static Pre Rendering
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- In the case of CSR(Client-Side Rendering), the HTML file has only root contents like below.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  ```
+  <div id="root"></div>
+  ```
+
+- So, user's network environment is not good enough, then user should wait the page rendering with empty page until downloading all JavaScript Source Code.
+
+- On the other hand, user can see the pre-rendering HTML page until downloading all source code or files without empty page. It is big difference between CSR and SSR(Server Side Rendering).
+
+## 1-3 Routing
+
+## 1-4 CSS Modules
+
+## 1-5 Styles JSX
+
+## 1-6 Custom App
+
+## 2-0 Patterns
