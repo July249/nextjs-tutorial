@@ -88,6 +88,39 @@
 
 ## 1-5 Styles JSX
 
+- Styled JSX is a CSS-in-JS library that is built into Next.js, a popular React-based framework for building web applications. It allows you to write CSS code directly in your JavaScript code, making it easier to manage and maintain your application's styles.
+
+- With Styled JSX, you can write your CSS styles as template literals within your React components, and Next.js will automatically scope the styles to that component only. This means that you don't need to worry about naming collisions or specificity issues.
+
+- Here's an example of how you can use Styled JSX in a Next.js component:
+
+```jsx
+function MyComponent() {
+  return (
+    <div>
+      <h1 className='title'>Hello World</h1>
+      <p className='description'>This is a description</p>
+
+      <style jsx>{`
+        .title {
+          font-size: 2rem;
+          color: red;
+        }
+
+        .description {
+          font-size: 1rem;
+          color: blue;
+        }
+      `}</style>
+    </div>
+  );
+}
+```
+
+- In this example, the styles defined within the style tag are scoped to the MyComponent component only. The .title and .description classes are not globally available, so you don't have to worry about them conflicting with other styles in your application.
+
+- Overall, Styled JSX is a powerful and convenient way to manage your application's styles in Next.js.
+
 ## 1-6 Custom App
 
 ## 2-0 Patterns
