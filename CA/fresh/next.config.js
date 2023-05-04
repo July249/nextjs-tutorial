@@ -3,6 +3,16 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'cdn.example.com',
+  //       port: '',
+  //       path: '/:path*', // :path* is required
+  //     },
+  //   ],
+  // },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
