@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image'; // Image 최적화 => image를 무조건 import 해서 넣어줘야함
 import TomatoImg from '/public/food0.png';
 import PastaImg from '/public/food1.png';
@@ -9,6 +12,23 @@ export default function List() {
     { name: '파스타', price: '$10', src: PastaImg },
     { name: '코코넛', price: '$200', src: CoconutImg },
   ];
+
+  const [quantities, setQuantities] = useState([0, 0, 0]);
+
+  const handleMinus = (index) => {
+    if (quantities[index] > 0) {
+      const newQuantities = [...quantities];
+      newQuantities[index] -= 1;
+      setQuantities(newQuantities);
+    }
+  };
+
+  const handlePlus = (index) => {
+    const newQuantities = [...quantities];
+    newQuantities[index] += 1;
+    setQuantities(newQuantities);
+  };
+
   return (
     <main>
       <h2 className='title'>상품목록</h2>
@@ -23,6 +43,15 @@ export default function List() {
           <h3>
             {item.name} <span>{item.price}</span>
           </h3>
+          <div className='quantity-control'>
+            <button onClick={() => handleMinus(index)} type='button' className='minusBtn'>
+              -
+            </button>
+            <span className='item-quantity'>{quantities[index]}</span>
+            <button onClick={() => handlePlus(index)} type='button' className='plusBtn'>
+              +
+            </button>
+          </div>
         </div>
       ))}
     </main>
