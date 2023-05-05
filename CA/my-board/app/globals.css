@@ -19,3 +19,7 @@
   color: grey;
   margin: 5px 0px;
 }
+.list-link {
+  text-decoration: none;
+  color: #000;
+}
