@@ -23,3 +23,27 @@
   text-decoration: none;
   color: #000;
 }
+a {
+  color: #000;
+  text-decoration: none;
+}
+/* write */
+.p-20 {
+  padding: 20px;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+input {
+  width: 72%;
+}
+button {
+  padding: 10px 15px;
+  background: lightgray;
+  border: none;
+  border-radius: 5px;
+}

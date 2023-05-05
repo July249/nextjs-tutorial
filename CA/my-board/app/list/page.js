@@ -11,6 +11,7 @@ export default async function List() {
         <Link href={`/detail/${item._id}`} className='list-link' key={index}>
           <div className='list-item'>
             <h4>{item.title}</h4>
+            <Link href={`/edit/${item._id}`}>수정 ✏️</Link>
             <p>1월 1일</p>
           </div>
         </Link>
