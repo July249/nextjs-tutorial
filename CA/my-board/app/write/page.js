@@ -6,7 +6,7 @@ export default function Write() {
     const title = e.target[0].value;
     const content = e.target[1].value;
     const data = { title, content };
-    fetch('/api/test', {
+    fetch('/api/post/newPost', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
