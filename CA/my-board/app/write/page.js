@@ -13,26 +13,19 @@ export default function Write() {
       },
       body: JSON.stringify(data),
     });
+
+    e.target[0].value = '';
+    e.target[1].value = '';
   };
 
   return (
-    <div className='write-bg'>
+    <div className='p-20'>
       <h3>글 작성</h3>
-      <div className='write-container'>
-        <form action='/api/test' method='POST' onSubmit={handleSubmit}>
-          <div className='write-title'>
-            <input type='text' placeholder='제목을 입력하세요.' />
-          </div>
-
-          <div className='write-content'>
-            <textarea placeholder='내용을 입력하세요.' />
-          </div>
-
-          <div className='write-btn'>
-            <button type='submit'>등록</button>
-          </div>
-        </form>
-      </div>
+      <form action='/api/post/new' method='POST' onSubmit={handleSubmit}>
+        <input name='title' type='text' placeholder='제목을 입력하세요.' />
+        <textarea rows={10} cols={30} name='content' placeholder='내용을 입력하세요.' />
+        <button type='submit'>등록</button>
+      </form>
     </div>
   );
 }
