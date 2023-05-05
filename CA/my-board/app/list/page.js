@@ -5,7 +5,6 @@ export default async function List() {
   const client = await connectDB;
   const db = client.db('my-board');
   const result = await db.collection('post').find().toArray();
-  console.log(result);
   return (
     <div className='list-bg'>
       {result.map((item, index) => (
