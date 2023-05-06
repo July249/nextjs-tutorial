@@ -1,7 +1,6 @@
 // MongoDB 연결
 // 필요할 때만 서버에 연결을 요청하기 위해 외부 util로 분리
 // 하단의 구조는 Next.js 공식 문서에서 가져온 코드입니다.
-import { dotenv } from 'dotenv';
 import { MongoClient } from 'mongodb';
 const url = process.env.MONGODB_URI;
 const options = { useNewUrlParser: true };
