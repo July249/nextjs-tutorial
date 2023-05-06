@@ -47,3 +47,16 @@ button {
   border: none;
   border-radius: 5px;
 }
+/* navbar */
+.navbar {
+  background: #fff;
+  padding: 20px;
+}
+.navbar a {
+  margin-right: 10px;
+  text-decoration: noen;
+  color: #000;
+}
+.logo {
+  font-weight: bold;
+}
